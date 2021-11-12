@@ -1,8 +1,10 @@
-def newAvg(arr, newavg)
-    x = newavg *(arr.length + 1) - arr.reduce(0) { |a, b| a + b } 
-    if (x <= 0) raise 'ValueError'
-    end
-    x.ceil
+def new_avg(arr, newavg)
+    a = newavg * (arr.count + 1) - arr.sum
+  if a.negative?
+    raise "ERROR"
+  else
+    a.ceil
+  end
 end
 
 # The accounts of the "Fat to Fit Club (FFC)" association are supervised by John as a volunteered accountant. 
